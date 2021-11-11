@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Rubik:wght@500&family=Source+Serif+Pro&display=swap');
 
-/* pantallas 360px */
+/* pantallas pequeñas */
 @media (min-width:198px){
-
-  .main{
-    margin: 12px;
-    padding: 0;
-  }
-
     /* section de productos */
 .titulo{
 font-family: 'Libre Baskerville', serif;
@@ -37,11 +31,13 @@ color: rgb(10, 29, 197);
 }
 
 .card{
+  background-color: #F1F2F3;
     height: 120px;
     width: 120px;
     margin: auto;
     -webkit-perspective: 700;
     margin-top: 15px;
+    border: none;
     
   }
   .carta{
@@ -49,12 +45,13 @@ color: rgb(10, 29, 197);
     width: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: 2s;
+    transition: 0.7s;
     box-shadow: 0px 0px 5px #000000 ;
   }
   
   .carta:hover{
     transform: rotateY(180deg);
+
     
   }
   
@@ -77,20 +74,164 @@ color: rgb(10, 29, 197);
       width: 100%;
       height: 100%;
   }
+
+
 }
 
 /* pantallas grandes */
 @media (min-width:700px){
 
+  .title1{
+    font-size: 30px;
+  }
+
+  .card{
+    height: 150px;
+    width: 150px;
+    
+  }
+
+
+  .productos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+}
+
+/* pantalla de mas de 1000px */
+@media (min-width:1000px){
+
+  .title1{
+    font-size: 40px;
+  }
+  .card{
+    height: 230px;
+    width: 230px;
+    
+  }
+
+  /* Comparativo */
+
+/* Panels. */
+.splitview {
+  position: relative;
+  width: 100%;
+  min-height: 45vw;
+  overflow: hidden;
+}
+
+.panel {
+  position: absolute;
+  width: 100vw;
+  min-height: 45vw;
+  overflow: hidden;
+}
+
+  .panel .content {
+      position: absolute;
+      width: 100vw;
+      min-height: 45vw;
+      color: #FFF;
+  }
+
+  .panel .description {
+      width: 25%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+  }
+
+  .panel img {
+      box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+      width: 35%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  .panel h1, p{
+      color: black;
+  }
+
+
+.bottom {
+  background-color: #F1F2F3;
+  z-index: 1;
+}
+
+  .bottom .description {
+      right: 5%;
+  }
+
+.top {
+  background-color: #F1F2F3;
+  z-index: 2;
+  width: 50vw;
+
+  /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+}
+
+  .top .description {
+      left: 5%;
+  }
+
+/* Handle. */
+.handle {
+  height: 100%;
+  position: absolute;
+  display: block;
+  background-color: rgb(253, 171, 0);
+  width: 5px;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+}
+
+/* Skewed. */
+.skewed .handle {
+  top: 50%;
+  transform: rotate(30deg) translateY(-50%);
+  height: 200%;
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  transform-origin: top;
+}
+
+.skewed .top {
+  transform: skew(-30deg);
+  margin-left: -1000px;
+  width: calc(50vw + 1000px);
+}
+
+.skewed .top .content {
+  transform: skew(30deg);
+  margin-left: 1000px;
+}
+
+/* Responsive. */
+@media (max-width: 900px) {
+  body {
+      font-size: 75%;
+  }
+}
+
+}
+
+/* pantalla de mas de 1200px */
+@media (min-width:1200px){
+
+  .title1{
+    font-size: 40px;
+  }
   .card{
     height: 300px;
     width: 300px;
     
   }
 
-  .productos{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
 
 }

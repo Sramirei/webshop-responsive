@@ -11,10 +11,10 @@
 body{
     font-family: 'Roboto Mono', monospace;
     background-color: #F1F2F3 !important;
-    margin: 0 !important;
+    
 }
 
-/* pantallas 360px */
+/* pantallas pequeñas */
 @media (min-width:198px){
     
     .contenedor{
@@ -40,7 +40,7 @@ body{
     .logo{
         float: left;
         font-size: 1rem;
-        margin: 0;
+        margin: 10px;
         text-transform: uppercase;
         font-weight: 700;
     }
@@ -99,8 +99,8 @@ body{
    
         padding: 1em;
         position: absolute;
-        top: .5em;
-        right: .5em;
+        top: 1.2em;
+        right: 1.5em;
         
     }
 
